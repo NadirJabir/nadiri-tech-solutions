@@ -1,30 +1,51 @@
 <template>
-  <nav>
-    <router-link to="/">Home</router-link> |
-    <router-link to="/about">About</router-link>
-  </nav>
-  <router-view/>
+  <div id="app">
+    <Navbar v-if="showLayout" />
+    
+    <main class="content-wrapper">
+      <router-view v-slot="{ Component }">
+        <component :is="Component" v-if="Component" />
+      </router-view>
+    </main>
+    
+    <Footer v-if="showLayout" />
+  </div>
 </template>
 
+<script setup>
+import Navbar from '@/components/Navbar.vue';
+import Footer from '@/components/Footer.vue';
+import { computed } from 'vue';
+import { useRoute } from 'vue-router';
+
+const route = useRoute();
+const authPages = ['/login', '/signup', '/forgot-password'];
+
+// Use a computed property instead of direct $route.path access in template
+const showLayout = computed(() => {
+  return route && route.path && !authPages.includes(route.path);
+});
+</script>
+
 <style>
+html, body {
+  height: 100%;
+  margin: 0;
+}
+
 #app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  background: linear-gradient(135deg, #e0f7fa, #fdffff);
 }
 
-nav {
-  padding: 30px;
+.content-wrapper {
+  flex: 1 0 auto;
+  width: 100%; /* Ensure content spans full width */
 }
 
-nav a {
-  font-weight: bold;
-  color: #2c3e50;
-}
-
-nav a.router-link-exact-active {
-  color: #42b983;
+footer {
+  flex-shrink: 0;
 }
 </style>
