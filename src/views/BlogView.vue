@@ -1,21 +1,19 @@
 <script setup>
+// 1. Import the JSON file (ensure the path matches your project structure)
+import blogPosts from '@/assets/data/blogs.json';
+
 // Helper to resolve images from assets or URLs
 const getImageUrl = (path) => {
   if (!path) return '';
   if (path.startsWith('http')) return path;
   try {
-    return require(`@/assets/${path}`);
+    // For Webpack/Vue CLI projects
+    return require(`@/assets/blog/${path}`);
   } catch (e) {
-    console.error("Blog image not found:", path);
+    console.error("Blog image not found in assets:", path);
     return ''; 
   }
 };
-
-const blogPosts = [
-  { id: 1, title: 'The Future of Cloud Computing', excerpt: 'How serverless architecture is changing the way we deploy enterprise applications.', date: 'Oct 12, 2025', category: 'Cloud', image: 'blog-cloud.jpg' },
-  { id: 2, title: 'Vue 3 vs React in 2026', excerpt: 'A deep dive into performance, developer experience, and ecosystem growth.', date: 'Nov 05, 2025', category: 'Frontend', image: 'blog-vue.jpg' },
-  { id: 3, title: 'Securing Your Spring Boot API', excerpt: 'Best practices for implementing JWT and OAuth2 in modern Java backends.', date: 'Dec 01, 2025', category: 'Security', image: 'blog-security.jpg' }
-];
 </script>
 
 <template>
@@ -79,6 +77,7 @@ const blogPosts = [
 }
 
 .hero-content { max-width: 800px; margin: 0 auto; }
+
 .h-line { width: 50px; height: 4px; background: var(--primary); margin: 0 auto 25px; }
 
 .blog-grid {

@@ -1,40 +1,23 @@
 <script setup>
 import { computed } from 'vue';
+import projects from '@/assets/data/projects.json';
 
+// Props received from the router (:id)
 const props = defineProps(['id']);
 
-// Professional project data repository
-const projectData = {
-  '1': {
-    title: 'E-Commerce Scaling Solution',
-    client: 'RetailHub Global',
-    overview: 'Faced with massive traffic spikes, the client needed a migration from a monolithic architecture to a headless Vue 3 storefront.',
-    results: ['Server response time decreased by 60%', 'Mobile conversion rate increased by 22%', 'Zero downtime during Black Friday sales'],
-    tech: ['Vue 3', 'Node.js', 'AWS Lambda', 'GraphQL']
-  },
-  '2': {
-    title: 'FinTech Dashboard',
-    client: 'SecurePay Inc.',
-    overview: 'Developed a real-time data visualization platform for monitoring global transactions with military-grade security encryption.',
-    results: ['Data latency reduced to < 100ms', 'Automated fraud detection increased by 35%', 'Onboarded 50k users in month one'],
-    tech: ['TypeScript', 'Chart.js', 'Firebase', 'Secure Enclaves']
-  },
-  '3': {
-    title: 'Healthcare Management System',
-    client: 'City Hospital',
-    overview: 'A complete digital transformation of patient onboarding, replacing manual paperwork with a secure, HIPAA-compliant Vue portal.',
-    results: ['Patient wait times reduced by 40%', 'Paper waste eliminated across 5 departments', '100% HIPAA compliance audit score'],
-    tech: ['Nuxt.js', 'PostgreSQL', 'Docker', 'OAuth 2.0']
-  }
-};
-
-// Fallback logic if project ID doesn't exist
-const project = computed(() => projectData[props.id] || {
-  title: 'Project Case Study',
-  client: 'N/A',
-  overview: 'Project details are being updated by the NadiriTech team.',
-  results: ['N/A'],
-  tech: ['N/A']
+// Professional lookup logic from JSON
+const project = computed(() => {
+  // Find the project matching the ID from the URL
+  const found = projects.find(p => p.id === parseInt(props.id));
+  
+  // Return found project or a professional fallback
+  return found || {
+    title: 'Project Case Study',
+    client: 'NadiriTech Client',
+    overview: 'This project detail is currently being finalized.',
+    results: ['Quantifiable results loading...'],
+    tech: ['In Progress']
+  };
 });
 </script>
 
@@ -90,7 +73,7 @@ const project = computed(() => projectData[props.id] || {
 </template>
 
 <style scoped>
-/* Header Styling */
+/* Styles remain identical to your original design */
 .detail-hero {
   padding: 140px 0 60px;
   background: #ffffff;
@@ -135,7 +118,6 @@ const project = computed(() => projectData[props.id] || {
   border-radius: 2px;
 }
 
-/* Layout Grid */
 .content-layout {
   display: grid;
   grid-template-columns: 1.8fr 1fr;
@@ -155,7 +137,6 @@ const project = computed(() => projectData[props.id] || {
   margin-bottom: 40px;
 }
 
-/* Outcome Card */
 .outcome-card {
   background: #f8fafc;
   padding: 40px;
@@ -164,9 +145,7 @@ const project = computed(() => projectData[props.id] || {
 }
 
 .outcome-card h4 { margin-bottom: 20px; color: #1e293b; }
-
 .outcome-card ul { list-style: none; padding: 0; }
-
 .outcome-card ul li {
   margin-bottom: 15px;
   display: flex;
@@ -175,14 +154,10 @@ const project = computed(() => projectData[props.id] || {
   font-weight: 600;
   color: #2c3e50;
 }
-
 .outcome-card ul li i { color: #27ae60; }
 
-/* Sidebar */
 .sticky-meta { position: sticky; top: 120px; }
-
 .tech-grid { display: flex; flex-wrap: wrap; gap: 10px; margin: 20px 0 40px; }
-
 .tech-tag {
   background: #ebf5fb;
   color: #3498db;

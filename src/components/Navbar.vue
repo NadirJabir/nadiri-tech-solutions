@@ -14,6 +14,7 @@
           <li><router-link to="/" @click="closeMenu">Home</router-link></li>
           <li><router-link to="/solutions" @click="closeMenu">Solutions</router-link></li>
           <li><router-link to="/case-studies" @click="closeMenu">Case Studies</router-link></li>
+          <li><router-link to="/blog" @click="closeMenu">Blog</router-link></li>
           <li><router-link to="/contact" @click="closeMenu" class="nav-btn">Get a Quote</router-link></li>
         </ul>
       </nav>
@@ -98,7 +99,15 @@ nav ul li a {
   font-weight: 600;
   transition: color 0.3s;
 }
+nav ul li a:hover,
+nav ul li a.router-link-active {
+  color: #3498db; 
+}
 
+nav ul li a.nav-btn:hover {
+  background: #2980b9;
+  color: white !important;
+}
 .nav-btn {
   background: #3498db;
   color: white !important;

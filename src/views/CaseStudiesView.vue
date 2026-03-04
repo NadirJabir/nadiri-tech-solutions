@@ -1,27 +1,24 @@
 <script setup>
+// 1. Import the projects data
+import projects from '@/assets/data/projects.json';
+
 const getImageUrl = (path) => {
+  if (!path) return '';
   if (path.startsWith('http')) return path;
-  // Use require with the @ alias for Webpack projects
   try {
     return require(`@/assets/${path}`);
   } catch (e) {
-    console.error("Image not found:", path);
-    return ''; // Return empty or a placeholder if image missing
+    console.error("Project image not found:", path);
+    return '';
   }
 };
-
-const projects = [
-  { id: 1, title: 'E-Commerce Scaling Solution', client: 'RetailHub Global', tags: ['Vue 3', 'Node.js', 'AWS'], outcome: '40% Increase in Page Speed', image: 'ecommerce.png' },
-  { id: 2, title: 'FinTech Dashboard', client: 'SecurePay Inc.', tags: ['TypeScript', 'Chart.js', 'Firebase'], outcome: 'Real-time Data Visualization', image: 'fintech.png' },
-  { id: 3, title: 'Healthcare Management System', client: 'City Hospital', tags: ['Nuxt.js', 'PostgreSQL', 'Docker'], outcome: 'Streamlined Patient Onboarding', image: 'healthcare.png' },
-  { id: 4, title: 'Student Management System', client: 'City High School', tags: ['Nuxt.js', 'PostgreSQL', 'Docker'], outcome: 'Fully Functional Student Management', image: 'SMS.png' }
-];
 </script>
 
 <template>
   <div class="case-studies-page">
     <section class="cases-hero">
-      <div class="container"> <div class="hero-content">
+      <div class="container"> 
+        <div class="hero-content">
           <span class="badge">Success Stories</span>
           <h1>Proven <span>Results</span></h1>
           <div class="h-line"></div>
@@ -31,7 +28,8 @@ const projects = [
     </section>
 
     <section class="section-padding">
-      <div class="container-full"> <div class="cases-grid">
+      <div class="container-full"> 
+        <div class="cases-grid">
           <div v-for="project in projects" :key="project.id" class="case-card">
             <div class="case-image">
               <img :src="getImageUrl(project.image)" :alt="project.title">

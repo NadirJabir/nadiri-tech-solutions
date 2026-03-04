@@ -1,0 +1,110 @@
+[
+  { 
+    "id": 1, 
+    "title": "The Future of Cloud Computing", 
+    "excerpt": "How serverless architecture is changing enterprise deployment in 2026.", 
+    "date": "Oct 12, 2025", 
+    "category": "Cloud", 
+    "image": "cloud.png",
+    "content": "Cloud computing has evolved beyond simple hosting. In 2026, we see a massive shift toward edge computing and specialized AI-driven infrastructure. Serverless functions are now handling 70% of microservice logic, allowing developers to focus purely on business value rather than server maintenance."
+  },
+  { 
+    "id": 2, 
+    "title": "Vue 3 vs React: The 2026 Verdict", 
+    "excerpt": "A deep dive into performance, developer experience, and ecosystem growth.", 
+    "date": "Nov 05, 2025", 
+    "category": "Frontend", 
+    "image": "vue.png",
+    "content": "The debate between Vue and React continues, but with Vue 3's Vapor mode and React's new compiler, the performance gap has narrowed significantly. We explore why NadiriTech chooses Vue for its reactivity system while maintaining React for legacy enterprise scale."
+  },
+  { 
+    "id": 3, 
+    "title": "Securing Your Spring Boot API", 
+    "excerpt": "Best practices for implementing JWT and OAuth2 in modern Java backends.", 
+    "date": "Dec 01, 2025", 
+    "category": "Security", 
+    "image": "spring.png",
+    "content": "Security is no longer an afterthought. Modern Spring Boot 3.5+ applications must implement zero-trust architectures, robust encrypted communication, and sophisticated rate limiting to protect sensitive client data in an increasingly hostile digital environment."
+  },
+  { 
+    "id": 4, 
+    "title": "Microservices with Spring Cloud", 
+    "excerpt": "Building resilient distributed systems using Spring Boot and Railway.", 
+    "date": "Jan 10, 2026", 
+    "category": "Backend", 
+    "image": "microserives.png",
+    "content": "Managing service discovery and configuration in a distributed environment requires precision. This article details how to use Spring Cloud Gateway and Eureka to build systems that scale horizontally without manual intervention."
+  },
+  { 
+    "id": 5, 
+    "title": "The Rise of AI-Driven UX", 
+    "excerpt": "Integrating LLMs into your Vue 3 application for personalized experiences.", 
+    "date": "Jan 22, 2026", 
+    "category": "Design", 
+    "image": "AI.png",
+    "content": "User interfaces are becoming predictive. By integrating local AI models and LLM APIs, we can create dashboards that anticipate user needs before they click, moving from reactive design to proactive assistance."
+  },
+  { 
+    "id": 6, 
+    "title": "PostgreSQL Optimization Tips", 
+    "excerpt": "Advanced indexing and query tuning for high-traffic databases.", 
+    "date": "Feb 02, 2026", 
+    "category": "Database", 
+    "image": "post.png",
+    "content": "Database bottlenecks are the primary cause of application lag. We discuss partitioning strategies, JSONB indexing for flexible schemas, and vacuuming schedules to keep your PostgreSQL instances running at peak performance."
+  },
+  { 
+    "id": 7, 
+    "title": "Dockerizing Complex Workflows", 
+    "excerpt": "Containerization strategies for multi-environment Spring and Vue apps.", 
+    "date": "Feb 14, 2026", 
+    "category": "DevOps", 
+    "image": "dock.png",
+    "content": "Consistency across development, staging, and production is vital. Learn how to write multi-stage Dockerfiles that minimize image size while maximizing security by removing build dependencies from the final production layer."
+  },
+  { 
+    "id": 8, 
+    "title": "Mastering TypeScript Generics", 
+    "excerpt": "Writing reusable, type-safe code for large-scale enterprise projects.", 
+    "date": "Feb 20, 2026", 
+    "category": "Frontend", 
+    "image": "t.png",
+    "content": "Generic components in Vue 3 allow for incredible flexibility. We show how to build a dynamic table component that maintains strict type safety across diverse data structures using TypeScript interfaces."
+  },
+  { 
+    "id": 9, 
+    "title": "CI/CD Pipelines on Railway", 
+    "excerpt": "Automating deployments from GitHub to Cloud in seconds.", 
+    "date": "Feb 25, 2026", 
+    "category": "DevOps", 
+    "image": "ci.png",
+    "content": "Speed to market is a competitive advantage. Using Railway's automated build pipelines, we demonstrate how to set up continuous integration that runs tests and deploys only when all quality gates are passed."
+  },
+  { 
+    "id": 10, 
+    "title": "Testing with Vitest & JUnit", 
+    "excerpt": "A comprehensive guide to unit and integration testing in 2026.", 
+    "date": "Mar 01, 2026", 
+    "category": "Quality", 
+    "image": "concep.png",
+    "content": "Quality assurance shouldn't be a chore. We compare Vitest for frontend reactivity testing with JUnit 5 for backend stability, ensuring your code remains bug-free as your features grow."
+  },
+  { 
+    "id": 11, 
+    "title": "GraphQL vs REST in 2026", 
+    "excerpt": "Choosing the right API architecture for your next startup.", 
+    "date": "Mar 03, 2026", 
+    "category": "Backend", 
+    "image": "rest.png",
+    "content": "Is REST dead? Not quite. We discuss the tradeoffs between the flexibility of GraphQL and the simplicity of REST, and how a hybrid approach often yields the best results for modern mobile and web clients."
+  },
+  { 
+    "id": 12, 
+    "title": "Web Performance: Core Web Vitals", 
+    "excerpt": "Achieving a perfect 100 Lighthouse score with Vue and Nuxt.", 
+    "date": "Mar 04, 2026", 
+    "category": "Optimization", 
+    "image": "web.png",
+    "content": "Google's Core Web Vitals are more important than ever for SEO. We walk through image optimization, code splitting, and hydration strategies to ensure your NadiriTech solutions load in under 1 second globally."
+  }
+]

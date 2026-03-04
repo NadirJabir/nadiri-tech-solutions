@@ -34,7 +34,17 @@ const routes = [
     meta: { title: 'Project Details | NadiriTech' }
   },
   {
-    
+    path: '/blog',
+    name: 'Blog',
+    component: () => import('../views/BlogView.vue'),
+    meta: { title: 'Engineering Blog | NadiriTech' }
+  },
+  {
+    path: '/blog/:id',
+    name: 'BlogDetail',
+    component: () => import('../views/BlogDetailView.vue'),
+    props: true,
+    meta: { title: 'Read Article | NadiriTech' }
   },
   {
     path: '/contact',

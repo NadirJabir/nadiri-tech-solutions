@@ -1,0 +1,62 @@
+[
+  {
+    "id": 1,
+    "title": "E-Commerce Scaling Solution",
+    "client": "RetailHub Global",
+    "tags": ["Vue 3", "Node.js", "AWS"],
+    "outcome": "40% Increase in Page Speed",
+    "image": "ecommerce.png",
+    "overview": "Faced with massive traffic spikes, the client needed a migration from a monolithic architecture to a headless Vue 3 storefront.",
+    "results": [
+      "Server response time decreased by 60%",
+      "Mobile conversion rate increased by 22%",
+      "Zero downtime during Black Friday sales"
+    ],
+    "tech": ["Vue 3", "Node.js", "AWS Lambda", "GraphQL"]
+  },
+  {
+    "id": 2,
+    "title": "FinTech Dashboard",
+    "client": "SecurePay Inc.",
+    "tags": ["TypeScript", "Chart.js", "Firebase"],
+    "outcome": "Real-time Data Visualization",
+    "image": "fintech.png",
+    "overview": "Developed a real-time data visualization platform for monitoring global transactions with military-grade security encryption.",
+    "results": [
+      "Data latency reduced to < 100ms",
+      "Automated fraud detection increased by 35%",
+      "Onboarded 50k users in month one"
+    ],
+    "tech": ["TypeScript", "Chart.js", "Firebase", "Secure Enclaves"]
+  },
+  {
+    "id": 3,
+    "title": "Healthcare Management System",
+    "client": "City Hospital",
+    "tags": ["Nuxt.js", "PostgreSQL", "Docker"],
+    "outcome": "Streamlined Patient Onboarding",
+    "image": "healthcare.png",
+    "overview": "A complete digital transformation of patient onboarding, replacing manual paperwork with a secure, HIPAA-compliant Vue portal.",
+    "results": [
+      "Patient wait times reduced by 40%",
+      "Paper waste eliminated across 5 departments",
+      "100% HIPAA compliance audit score"
+    ],
+    "tech": ["Nuxt.js", "PostgreSQL", "Docker", "OAuth 2.0"]
+  },
+  {
+    "id": 4,
+    "title": "Student Management System",
+    "client": "City High School",
+    "tags": ["Vue 3", "Spring Boot", "MySQL"],
+    "outcome": "Fully Functional Student Management",
+    "image": "SMS.png",
+    "overview": "Created a centralized technical ecosystem to manage student records, grading, and teacher-parent communication via a custom dashboard.",
+    "results": [
+      "Admin processing time reduced by 50%",
+      "Secure real-time access for 2,000+ users",
+      "Mobile-responsive portal for on-the-go updates"
+    ],
+    "tech": ["Vue 3", "Spring Boot", "MySQL", "JWT Auth"]
+  }
+]
